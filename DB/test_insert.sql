@@ -1,0 +1,156 @@
+-- insert test topic
+INSERT INTO topic(name)
+VALUES ('운동'),('이직'),('성적향상'),('고양이'),('강아지'),('컴퓨터'),('요리'),('공부시간');
+
+-- insert test user
+INSERT INTO jarangdb.`user`(created, email, nickname, provider)
+VALUES 
+	(current_timestamp, 'test@naver.com', 'test', 'naver'),
+	(current_timestamp, 'test@naver.com1', 'test1', 'naver'),
+	(current_timestamp, 'test@naver.com2', 'test2', 'naver'),
+	(current_timestamp, 'test@naver.com3', 'test3', 'naver'),
+	(current_timestamp, 'test@naver.com4', 'test4', 'naver'),
+	(current_timestamp, 'test@naver.com5', 'test5', 'naver'),
+	(current_timestamp, 'test@naver.com6', 'test6', 'naver'),
+	(current_timestamp, 'test@naver.com7', 'test7', 'naver'),
+	(current_timestamp, 'test@naver.com8', 'test8', 'naver'),
+	(current_timestamp, 'test@naver.com9', 'test9', 'naver'),
+	(current_timestamp, 'test@naver.com10', 'test10', 'naver');
+
+-- insert test user_topic
+INSERT INTO jarangdb.`user_topic`(topic_id, user_id)
+VALUES 
+	(1, 1),
+	(2, 1),
+	(3, 1),
+	(1, 4),
+	(2, 4),
+	(3, 4),
+	(1, 7),
+	(2, 7),
+	(3, 7),
+	(1, 10),
+	(2, 10),
+	(3, 10),
+	(4, 2),
+	(5, 2),
+	(6, 2),
+	(4, 5),
+	(5, 5),
+	(6, 5),
+	(4, 8),
+	(5, 8),
+	(6, 8),
+	(4, 11),
+	(5, 11),
+	(6, 11),
+	(7, 3),
+	(8, 3),
+	(7, 6),
+	(8, 6),
+	(7, 9),
+	(8, 9);
+	
+-- insert test board
+INSERT INTO jarangdb.`board`(topic_id, user_id, content, title, created)
+VALUES 
+(1, 1,'운동내용임 나는1', '운동제목 나는1', current_timestamp),
+(2, 1,'이직내용임 나는1', '이직제목 나는1', current_timestamp),
+(3, 1,'성적향상내용임 나는1', '성적향상제목 나는1', current_timestamp),
+(1, 4,'운동내용임 나는4', '운동제목 나는4', current_timestamp),
+(2, 4,'이직내용임 나는4', '이직제목 나는4', current_timestamp),
+(3, 4,'성적향상내용임 나는4', '성적향상제목 나는4', current_timestamp),
+(1, 7,'운동내용임 나는7', '운동제목 나는7', current_timestamp),
+(2, 7,'이직내용임 나는7', '이직제목 나는7', current_timestamp),
+(3, 7,'성적향상내용임 나는7', '성적향상제목 나는7', current_timestamp),
+(1, 10,'운동내용임 나는10', '운동제목 나는10', current_timestamp),
+(2, 10,'이직내용임 나는10', '이직제목 나는10', current_timestamp),
+(3, 10,'성적향상내용임 나는10', '성적향상제목 나는10', current_timestamp),
+(4, 2,'고양이내용임 나는2', '고양이제목 나는2', current_timestamp),
+(5, 2,'강아지내용임 나는2', '강아지제목 나는2', current_timestamp),
+(6, 2,'컴퓨터내용임 나는2', '컴퓨터제목 나는2', current_timestamp),
+(4, 5,'고양이내용임 나는5', '고양이제목 나는5', current_timestamp),
+(5, 5,'강아지내용임 나는5', '강아지제목 나는5', current_timestamp),
+(6, 5,'컴퓨터내용임 나는5', '컴퓨터제목 나는5', current_timestamp),
+(4, 8,'고양이내용임 나는8', '고양이제목 나는8', current_timestamp),
+(5, 8,'강아지내용임 나는8', '강아지제목 나는8', current_timestamp),
+(6, 8,'컴퓨터내용임 나는8', '컴퓨터제목 나는8', current_timestamp),
+(4, 11,'고양이내용임 나는11', '고양이제목 나는11', current_timestamp),
+(5, 11,'강아지내용임 나는11', '강아지제목 나는11', current_timestamp),
+(6, 11,'컴퓨터내용임 나는11', '컴퓨터제목 나는11', current_timestamp),
+(7, 3,'요리내용임 나는3', '요리제목임 나는3', current_timestamp),
+(8, 3,'공부시간내용임 나는3', '공부시간제목임 나는3', current_timestamp),
+(7, 6,'요리내용임 나는6', '요리제목임 나는6', current_timestamp),
+(8, 6,'공부시간내용임 나는6', '공부시간제목임 나는6', current_timestamp),
+(7, 9,'요리내용임 나는9', '요리제목임 나는9', current_timestamp),
+(8, 9,'공부시간내용임 나는9', '공부시간제목임 나는9', current_timestamp);
+
+
+-- insert test comment
+INSERT INTO jarangdb.`comment`(topic_id, user_id, content, title, created)
+VALUES 
+(1, 1,'운동내용임 나는1', '운동제목 나는1', current_timestamp),
+(2, 1,'이직내용임 나는1', '이직제목 나는1', current_timestamp),
+(3, 1,'성적향상내용임 나는1', '성적향상제목 나는1', current_timestamp),
+(1, 4,'운동내용임 나는4', '운동제목 나는4', current_timestamp),
+(2, 4,'이직내용임 나는4', '이직제목 나는4', current_timestamp),
+(3, 4,'성적향상내용임 나는4', '성적향상제목 나는4', current_timestamp),
+(1, 7,'운동내용임 나는7', '운동제목 나는7', current_timestamp),
+(2, 7,'이직내용임 나는7', '이직제목 나는7', current_timestamp),
+(3, 7,'성적향상내용임 나는7', '성적향상제목 나는7', current_timestamp),
+(1, 10,'운동내용임 나는10', '운동제목 나는10', current_timestamp),
+(2, 10,'이직내용임 나는10', '이직제목 나는10', current_timestamp),
+(3, 10,'성적향상내용임 나는10', '성적향상제목 나는10', current_timestamp),
+(4, 2,'고양이내용임 나는2', '고양이제목 나는2', current_timestamp),
+(5, 2,'강아지내용임 나는2', '강아지제목 나는2', current_timestamp),
+(6, 2,'컴퓨터내용임 나는2', '컴퓨터제목 나는2', current_timestamp),
+(4, 5,'고양이내용임 나는5', '고양이제목 나는5', current_timestamp),
+(5, 5,'강아지내용임 나는5', '강아지제목 나는5', current_timestamp),
+(6, 5,'컴퓨터내용임 나는5', '컴퓨터제목 나는5', current_timestamp),
+(4, 8,'고양이내용임 나는8', '고양이제목 나는8', current_timestamp),
+(5, 8,'강아지내용임 나는8', '강아지제목 나는8', current_timestamp),
+(6, 8,'컴퓨터내용임 나는8', '컴퓨터제목 나는8', current_timestamp),
+(4, 11,'고양이내용임 나는11', '고양이제목 나는11', current_timestamp),
+(5, 11,'강아지내용임 나는11', '강아지제목 나는11', current_timestamp),
+(6, 11,'컴퓨터내용임 나는11', '컴퓨터제목 나는11', current_timestamp),
+(7, 3,'요리내용임 나는3', '요리제목임 나는3', current_timestamp),
+(8, 3,'공부시간내용임 나는3', '공부시간제목임 나는3', current_timestamp),
+(7, 6,'요리내용임 나는6', '요리제목임 나는6', current_timestamp),
+(8, 6,'공부시간내용임 나는6', '공부시간제목임 나는6', current_timestamp),
+(7, 9,'요리내용임 나는9', '요리제목임 나는9', current_timestamp),
+(8, 9,'공부시간내용임 나는9', '공부시간제목임 나는9', current_timestamp);
+
+-- insert test comment
+INSERT INTO jarangdb.`comment`(board_id, user_id, content, created)
+VALUES 
+(1, 1,'운동댓글댓글 나는1', current_timestamp),
+(2, 1,'이직댓글댓글 나는1', current_timestamp),
+(3, 1,'성적향상댓글댓글 나는1', current_timestamp),
+(1, 4,'운동댓글댓글 나는4', current_timestamp),
+(2, 4,'이직댓글댓글 나는4', current_timestamp),
+(3, 4,'성적향상댓글댓글 나는4', current_timestamp),
+(1, 7,'운동댓글댓글 나는7', current_timestamp),
+(2, 7,'이직댓글댓글 나는7', current_timestamp),
+(3, 7,'성적향상댓글댓글 나는7', current_timestamp),
+(1, 10,'운동댓글댓글 나는10', current_timestamp),
+(2, 10,'이직댓글댓글 나는10', current_timestamp),
+(3, 10,'성적향상댓글댓글 나는10', current_timestamp),
+(13, 2,'고양이댓글댓글 나는2', current_timestamp),
+(14, 2,'강아지댓글댓글 나는2', current_timestamp),
+(15, 2,'컴퓨터댓글댓글 나는2', current_timestamp),
+(13, 5,'고양이댓글댓글 나는5', current_timestamp),
+(14, 5,'강아지댓글댓글 나는5', current_timestamp),
+(15, 5,'컴퓨터댓글댓글 나는5', current_timestamp),
+(13, 8,'고양이댓글댓글 나는8', current_timestamp),
+(14, 8,'강아지댓글댓글 나는8', current_timestamp),
+(15, 8,'컴퓨터댓글댓글 나는8', current_timestamp),
+(13, 11,'고양이댓글댓글 나는11', current_timestamp),
+(14, 11,'강아지댓글댓글 나는11', current_timestamp),
+(15, 11,'컴퓨터댓글댓글 나는11', current_timestamp),
+(25, 3,'요리댓글댓글 나는3', current_timestamp),
+(26, 3,'공부시간댓글댓글 나는3', current_timestamp),
+(25, 6,'요리댓글댓글 나는6', current_timestamp),
+(26, 6,'공부시간댓글댓글 나는6', current_timestamp),
+(25, 9,'요리댓글댓글 나는9', current_timestamp),
+(26, 9,'공부시간댓글댓글 나는9', current_timestamp);
+
